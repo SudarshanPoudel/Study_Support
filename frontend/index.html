@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Support</title>
+
+    <!-- External CSS and JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/servicebox.css" />
+    <link rel="stylesheet" href="css/popup.css" />
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Upload or Enter PDF URLs</h2>
+            <form id="pdfForm">
+                <div class="url-box">
+                    <input type="text" id="urls" placeholder="Enter PDF URL" />
+                    <button type="button" id="addUrl">+</button>
+                </div>
+                <div class="or">OR</div>
+                <label for="pdfFiles" id="upload-pdf-label">
+                    Select Local PDFs <i class="fa-solid fa-file-circle-plus"></i>
+                    <input type="file" id="pdfFiles" accept="application/pdf" multiple />
+                </label>
+                <p>Selected PDFs</p>
+                <div class="selected-files">No files selected</div>
+                <button type="button" id="uploadFiles">Upload Files</button>
+            </form>
+
+            <p id="log">Upload Your Study Materials.</p>
+
+            <!-- Task Selection Form -->
+            <form id="taskForm">
+                <h3>Select Task</h3>
+                <label>
+                    <input type="radio" name="task" value="qa" checked /> Q&A
+                    <i class="fa-solid fa-comment"></i>
+                </label>
+                <label>
+                    <input type="radio" name="task" value="flashcard" /> Flashcards
+                    <i class="fa-solid fa-note-sticky"></i>
+                </label>
+                <label>
+                    <input type="radio" name="task" value="summary" /> Summarization
+                    <i class="fa-solid fa-minimize"></i>
+                </label>
+                <label>
+                    <input type="radio" name="task" value="quiz" /> Quiz
+                    <i class="fa-solid fa-list-check"></i>
+                </label>
+            </form>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" id="mainContent">
+            <!-- Dynamic content based on task selection will be loaded here -->
+        </div>
+
+        <!-- Popup Box -->
+        <div id="pdfPopup" class="popup">
+            <div class="popup-content">
+                <p id="pdf-name"></p>
+                <button onclick="closePopup()" class="closePdfPopup">&times;</button>
+                <iframe id="pdfViewer" src="" type="application/pdf"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- External JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- Internal js -->
+    <script src="js/sidebartask.js"></script>
+    <script src="js/loadcontent.js"></script>
+    <script src="js/qa.js"></script>
+    <script src="js/flashcard.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/summary.js"></script>
+</body>
+
+</html>

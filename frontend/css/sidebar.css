@@ -1,0 +1,157 @@
+/* Sidebar */
+.sidebar {
+    width: 25vw;
+    height: 100%;
+    background-color: var(--sidebar-bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    margin-left: -12px;
+}
+
+.sidebar h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.sidebar .url-box {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar #urls {
+    flex: 1;
+    height: 40px;
+    padding: 0 5px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    font-size: 1em;
+}
+
+.sidebar #addUrl {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.sidebar .or {
+    width: max-content;
+    margin: 5px auto 7px auto;
+    padding: 1px 40%;
+    border-bottom: 2px solid var(--text-color);
+}
+
+.sidebar #upload-pdf-label {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#upload-pdf-label input {
+    display: none;
+}
+
+#upload-pdf-label i {
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+.sidebar .selected-files {
+    margin: 10px 0;
+}
+
+.selected-files .file {
+    display: flex;
+    padding: 5px 0;
+    align-items: center;
+}
+
+.file .filename {
+    color: var(--text-color);
+    border: none;
+    background: none;
+}
+
+.file .filename:hover {
+    text-decoration: underline;
+}
+
+.file .delete-file {
+    width: 40px;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.delete-file:hover {
+    opacity: 0.5;
+}
+
+.sidebar #uploadFiles {
+    margin: 10px 0;
+    height: 3rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.sidebar #log {
+    margin: 10px 0;
+}
+
+#taskForm {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#taskForm h3 {
+    margin-bottom: 15px;
+}
+
+#taskForm label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#taskForm label i {
+    margin-left: 10px;
+}
+
+input[type="radio"] {
+    appearance: none;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    background-color: var(--primary-color);
+}
+
+

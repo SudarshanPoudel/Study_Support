@@ -1,0 +1,46 @@
+/* Common styling */
+:root {
+    --primary-color: #5c2aff;
+    --text-color: #fff;
+    --bg-color: #171717;
+    --sidebar-bg-color: #292929;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.2s ease-in-out;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.main-content {
+    position: relative;
+    padding: 0 20px;
+    width: 75vw;
+}
+
+.main-content .task-heading {
+    text-align: center;
+    margin: 20px auto 0 auto;
+    padding: 0 10px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    width: max-content;
+    border-bottom: 4px solid var(--text-color);
+}

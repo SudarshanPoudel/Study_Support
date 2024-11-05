@@ -1,0 +1,49 @@
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    position: relative;
+    margin: 2vh auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.closePdfPopup {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    height: 20px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#pdf-name {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: #000;
+}
+
+iframe {
+    width: 100%;
+    margin-top: 20px;
+    height: 85vh;
+    border: none;
+    border-radius: 5px;
+}
